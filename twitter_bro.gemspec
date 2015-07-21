@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Guilherme da Silva Mello"]
   spec.email         = ["guilhermesilvamello@gmail.com"]
 
-  spec.summary       = "Twitter api lib created during a training session."
-  spec.description   = "Twitter api lib created during a training session."
+  spec.summary       = "Twitter api lib created during a trainning session."
+  spec.description   = "Twitter api lib created during a trainning session."
   spec.homepage      = "http://twitter.com"
   spec.license       = "MIT"
 
