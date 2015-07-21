@@ -19,7 +19,7 @@ RSpec.describe TwitterBro::Client do
     let(:tweet) { TwitterBro::Tweet.new text: "le body" }
     let(:bearer_token) { TwitterBro::BearerToken.new value: "le token" }
 
-    let(:rack_response) { [ 200, {}, { "statuses" => [tweet.as_json] }.to_json ] }
+    let(:rack_response) { [200, {}, { "statuses" => [tweet.as_json] }.to_json] }
 
     let(:request_headers) do
       {
@@ -30,7 +30,7 @@ RSpec.describe TwitterBro::Client do
     let(:http_stub) do
       Faraday.new do |builder|
         builder.adapter :test do |stub|
-          stub.get("/1.1/search/tweets.json?q=#{text}", request_headers) do |env|
+          stub.get("/1.1/search/tweets.json?q=#{text}", request_headers) do |_|
             rack_response
           end
         end
@@ -79,12 +79,12 @@ RSpec.describe TwitterBro::Client do
       }
     end
 
-    let(:rack_response) { [ 200, {}, response.to_json ] }
+    let(:rack_response) { [200, {}, response.to_json] }
 
     let(:http_stub) do
       Faraday.new do |builder|
         builder.adapter :test do |stub|
-          stub.post("/oauth2/token", request_body, request_headers) do |env|
+          stub.post("/oauth2/token", request_body, request_headers) do |_|
             rack_response
           end
         end

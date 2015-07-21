@@ -4,7 +4,6 @@ require "json"
 
 module TwitterBro
   class Client
-
     attr_accessor :consumer_key
     attr_accessor :consumer_secret_key
 
@@ -51,7 +50,7 @@ module TwitterBro
       @bearer_token = TwitterBro::BearerToken.new value: JSON.parse(response.body)["access_token"]
     end
 
-    def search(text)
+    def search(text) # rubocop:disable Metrics/AbcSize
       response = http_client.get do |req|
         req.url "/1.1/search/tweets.json"
 

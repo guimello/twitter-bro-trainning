@@ -1,0 +1,81 @@
+AllCops:
+  Include:
+    - "**/*.gemspec"
+    - "**/Rakefile"
+    - "**/Gemfile"
+  Exclude:
+    - "spec/spec_helper.rb"
+    - "bin/*"
+
+# avoid parameter lists longer than 5 parameters.
+ParameterLists:
+  Max: 5
+  CountKeywordArgs: true
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/AlignHash:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Metrics/BlockNesting:
+  Enabled: false
+
+Style/CaseIndentation:
+  IndentOneStep: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/Encoding:
+  EnforcedStyle: when_needed
+
+Style/FormatString:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  MaxLineLength: 120
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/LambdaCall:
+  EnforcedStyle: call
+
+Metrics/LineLength:
+  Max: 120
+
+Style/NonNilCheck:
+  IncludeSemanticChanges: true
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Style/PredicateName:
+  NamePrefixBlacklist:
+    - is_
+
+Style/RedundantReturn:
+  AllowMultipleReturnValues: true
+
+Style/SingleLineBlockParams:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/WhileUntilModifier:
+  MaxLineLength: 120

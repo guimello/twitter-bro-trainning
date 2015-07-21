@@ -1,7 +1,7 @@
 RSpec.shared_examples "a fail response" do
   context "when the request fails" do
     context "when forbidden" do
-      let(:rack_response) { [ 403, {}, "" ] }
+      let(:rack_response) { [403, {}, ""] }
 
       it do
         aggregate_failures "requesting" do
@@ -14,7 +14,7 @@ RSpec.shared_examples "a fail response" do
     end
 
     context "when any unmapped error" do
-      let(:rack_response) { [ 500, {}, "" ] }
+      let(:rack_response) { [500, {}, ""] }
 
       it do
         aggregate_failures "requesting" do
